@@ -8,9 +8,7 @@ subtitle: ''
 description: "This is T123Minecraft's website."
 keywords:
 author: T123Minecraft
-language:
-- zh-cn
-- en
+language: zh-cn
 timezone: 'Asia/Shanghai'
 
 # URL
