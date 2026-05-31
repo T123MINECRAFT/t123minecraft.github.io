@@ -31,3 +31,15 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public   # Hexo 默认生成到 public 文件夹
           publish_branch: gh-pages
+
+      - name: Clean and generate
+        run: |
+          npx hexo clean
+          npx hexo generate
+
+      - name: Debug generated files
+        run: |
+          echo "=== public directory tree ==="
+          ls -laR public/
+          echo "=== index.html first 20 lines ==="
+          head -n 20 public/index.html || echo "index.html not found or empty"
